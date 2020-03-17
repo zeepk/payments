@@ -1,0 +1,9 @@
+frontend:
+    src is where components and redux live (anything react)
+    templates will handle the index.html (single page)
+    static will be the compiled JS, 
+        Webpack will take react application (index.js as entry point)
+        compile it down to main.js inside static
+	main.js is being loaded into index.html
+    webpack.config.js allows us to use babel to transpile our code
+	dev script takes index.html and displays it to main.js
