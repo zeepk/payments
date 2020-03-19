@@ -11,11 +11,6 @@ class Lead(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
 class Event(models.Model):
-    # EVENT_TYPES = (
-    #     ('MO', 'Monthly'),
-    #     ('WE', 'Weekly'),
-    #     ('BW', 'Biweekly'),
-    # )
     name = models.CharField(max_length=100)
     type = models.CharField(max_length=100)
     start_date = models.DateField()
