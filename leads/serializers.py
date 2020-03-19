@@ -8,7 +8,7 @@ class LeadSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class EventSerializer(serializers.ModelSerializer):
-    type = serializers.CharField(source='get_type_display')
+    # type = serializers.CharField(source='get_type_display')
     class Meta:
         model = Event
         fields = '__all__'
