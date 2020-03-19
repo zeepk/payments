@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
-
+from .welcome_email import send_welcome_email
 # User serializer
 
 
@@ -25,7 +25,7 @@ class RegisterSerializer(serializers.ModelSerializer):
 
         # TODO: notify me AND the user when a user is created :)
         print("User created!")
-        print(user.email)
+        send_welcome_email(user.username, user.email)
         return user
 
 
