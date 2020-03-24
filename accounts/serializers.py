@@ -25,7 +25,7 @@ class RegisterSerializer(serializers.ModelSerializer):
 
         # TODO: notify me AND the user when a user is created :)
         print("User created!")
-        send_welcome_email(user.username, user.email)
+        # send_welcome_email(user.username, user.email)
         return user
 
 
